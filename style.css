@@ -1,0 +1,117 @@
+/* General reset and font */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header / Hero Section */
+.hero {
+    min-height: 100vh; /* full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("images/hero.jpeg"); /* replace with your own image path */
+    background-size: cover;     /* image covers the entire hero section */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero .logo {
+    max-width: 320px; /* larger logo / image in hero */
+    width: 100%;      /* responsive width */
+    height: auto;     /* maintain aspect ratio */
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+}
+
+.section.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.brands {
+    line-height: 1.8;
+}
+
+/* CONTACT SECTION */
+.contact {
+    display: flex;
+    flex-direction: column; /* stack items vertically on mobile */
+    align-items: flex-start;
+    gap: 20px; /* spacing between contact info and image */
+}
+
+.contact-info {
+    max-width: 400px;
+}
+
+.contact-logo img {
+    max-width: 300px; /* larger contact image */
+    width: 100%;      /* responsive width */
+    height: auto;     /* maintain aspect ratio */
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Links */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVENESS */
+@media (min-width: 860px) {
+    .contact {
+        flex-direction: row; /* contact info + image side by side on desktop */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .contact-logo {
+        margin-left: 20px; /* spacing between text and image */
+    }
+}
+
+@media (max-width: 859px) {
+    .contact-logo img {
+        max-width: 200px; /* smaller image on mobile */
+    }
+}
